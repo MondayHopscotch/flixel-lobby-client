@@ -49,6 +49,7 @@
 	<haxelib name="haxeui-core" />
 	<haxelib name="haxeui-flixel" />
 	<haxelib name="hxWebSockets" />
+	<haxelib name="flixel-text-input" />
 	
 	<!-------------------------------HAXEDEFINES------------------------------->
 	

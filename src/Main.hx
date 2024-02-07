@@ -11,7 +11,7 @@ class Main {
     public static function main() {
         var app = new HaxeUIApp();
         app.ready(function() {
-            FlxG.switchState(()->new LobbyState(app));
+            FlxG.switchState(new LobbyState(app));
         });
     }
 }
