@@ -30,7 +30,11 @@ class LobbyState extends FlxState {
 			sendMessage();
 		}
 
-		ws = new WebSocket("ws://127.0.0.1:8080/join");
+		var addr = "ws://127.0.0.1:8080/join";
+		#if SERVER_ADDR
+		addr = 'wss://${Macros.getDefine("SERVER_ADDR")}/join';
+		#end
+		ws = new WebSocket(addr);
 		ws.onmessage = function(message:MessageType) {
 			var contents:String;
 			switch (message) {
